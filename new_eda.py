@@ -22,6 +22,7 @@ eda_options = st.sidebar.selectbox("Data Analysis Options - ", [
 # OCR section
 uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
+
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_column_width=True)
@@ -71,6 +72,7 @@ if uploaded_file is not None:
         named_entities = [(ent.text, ent.label_) for ent in doc.ents]
         from spacy import displacy
         image_html = displacy.render(doc, style="ent")
+        st.subheader("Highlighted Text", divider='rainbow')
         st.markdown(image_html, unsafe_allow_html=True)
         st.subheader("Named Entities")
         st.write(named_entities)
