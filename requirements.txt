@@ -4,3 +4,4 @@ nltk
 pandas
 numpy
 matplotlib
+spacy.load("en_core_web_sm")
