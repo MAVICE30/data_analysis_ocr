@@ -1,0 +1,5 @@
+pytesseract
+spacy
+nltk
+pandas
+numpy
