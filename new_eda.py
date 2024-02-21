@@ -48,9 +48,9 @@ if uploaded_file is not None:
     elif eda_options == "Part-of-Speech Tagging":
         from nltk import word_tokenize, pos_tag
 
-        # nltk.download('punkt')
-        # nltk.download('averaged_perceptron_tagger')
-        # nltk.download('universal_tagset')
+        nltk.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
+        nltk.download('universal_tagset')
 
         tagged_words = pos_tag(word_tokenize(text), tagset='universal')
         pos = np.empty(len(tagged_words), dtype=object)
